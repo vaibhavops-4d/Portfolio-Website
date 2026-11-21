@@ -1,0 +1,531 @@
+/* ============================================================
+   College Project: Personal Portfolio Website Stylesheet
+   Design: Minimal, Clean, Modern, and Easy to Explain
+   ============================================================ */
+
+/* 1. Global Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Includes padding & border in element total width/height */
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth animated jump to page sections */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1e293b; /* Dark slate text for high readability */
+  background-color: #f1f5f9; /* Soft light gray-slate background */
+}
+
+/* 2. Reusable Layout Container */
+.container {
+  width: 90%;
+  max-width: 1000px; /* Keeps line length comfortable for reading */
+  margin: 0 auto;    /* Centers the container horizontally */
+}
+
+/* 3. Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 100;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #2563eb; /* Primary Royal Blue */
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* 4. Hero Section */
+.hero {
+  padding: 5rem 0 4rem 0;
+  text-align: center;
+  background: linear-gradient(180deg, #e2e8f0 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.greeting {
+  font-size: 1.1rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-role {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 1.25rem;
+}
+
+.hero-bio {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* 5. Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+/* 6. Section General Styles */
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-light {
+  background-color: #e8edf5; /* Soft contrasting tint for alternating sections */
+}
+
+.section-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  background-color: #2563eb;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* 7. About Section */
+.about-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+.about-card p {
+  color: #475569;
+  line-height: 1.7;
+  font-size: 1.025rem;
+  margin-bottom: 1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.info-item {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.info-item strong {
+  color: #0f172a;
+}
+
+/* 8. Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.skill-list {
+  list-style: none;
+}
+
+.skill-list li {
+  color: #475569;
+  font-size: 0.95rem;
+  padding: 0.35rem 0;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.skill-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 0.85rem;
+}
+
+/* 9. Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #93c5fd;
+}
+
+.project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2563eb;
+  background-color: #eff6ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.project-desc {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1; /* Pushes tags and link neatly to the bottom */
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-tech span {
+  font-size: 0.8rem;
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* 10. Education Section */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 2rem auto 0 auto;
+}
+
+.education-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.education-header h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.education-year {
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 600;
+  background-color: #eff6ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.education-institute {
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.education-details {
+  color: #475569;
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+/* 11. Contact Section */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.contact-details p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  margin-bottom: 0.75rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.contact-item a {
+  color: #2563eb;
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.925rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.btn-submit {
+  width: 100%;
+  border: none;
+}
+
+.form-feedback {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 12. Footer */
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.top-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-link:hover {
+  color: #ffffff;
+}
+
+/* 13. Responsive Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr; /* Stacks contact info and form on small screens */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
